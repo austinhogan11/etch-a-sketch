@@ -1,4 +1,4 @@
-const display = document.querySelector('.eas-display');
+const easDisplay = document.querySelector('.eas-display');
 
 const GRID_HEIGHT = 16;
 const GRID_WIDTH = 16;
@@ -16,7 +16,13 @@ for (let x = 1; x <= GRID_HEIGHT; x++) {
         col.appendChild(content);
         row.appendChild(col);
     }
-    display.append(row);
+    easDisplay.append(row);
 }
 
-
+easBlocks = document.querySelectorAll(".col");
+easBlocks.forEach(block => {
+    block.addEventListener("mouseenter", (e) => {
+        e.target.style.background = 'grey';
+    });
+    
+});
