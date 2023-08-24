@@ -1,0 +1,59 @@
+/* html,
+body {
+    height: 100%;
+    margin: 0;
+} */
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+#eas-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+.grid-options {
+    display: flex;
+    justify-content: end;
+    padding: 20px 0;
+
+}
+
+button {
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 0 20px 0 0;
+}
+
+.eas-display {
+    border: black;
+    border-style: solid;
+    
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    /* border: black;
+    border-style: solid; */
+    /* margin: 5px; */
+}
