@@ -4,6 +4,34 @@ body {
     margin: 0;
 } */
 
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+#eas-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+.clear-btn {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.eas-display {
+    border: black;
+    border-style: solid;
+    
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .row {
     display: flex;
 }
@@ -12,7 +40,11 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    border: black;
+    height: 50px;
     border-style: solid;
-    margin: 5px;
+    border-color: grey;
+    border-width: 1px;
+    /* border: black;
+    border-style: solid; */
+    /* margin: 5px; */
 }

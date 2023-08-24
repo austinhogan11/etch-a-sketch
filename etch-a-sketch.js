@@ -12,7 +12,8 @@ for (let x = 1; x <= GRID_HEIGHT; x++) {
         col.classList.add('col');
 
         const content = document.createElement('div');
-        content.textContent = `${y}`;
+        content.classList.add('content');
+
         col.appendChild(content);
         row.appendChild(col);
     }
@@ -22,7 +23,14 @@ for (let x = 1; x <= GRID_HEIGHT; x++) {
 easBlocks = document.querySelectorAll(".col");
 easBlocks.forEach(block => {
     block.addEventListener("mouseenter", (e) => {
-        e.target.style.background = 'grey';
+        e.target.style.background = 'aquamarine';
     });
     
+});
+
+clearBtn = document.querySelector(".clear-btn");
+clearBtn.addEventListener('click', () => {
+    easBlocks.forEach(block => {
+        block.style.background = "white";
+    });
 });
