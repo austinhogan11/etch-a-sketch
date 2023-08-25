@@ -1,6 +1,7 @@
 const DEFAULT_GRID_SIZE = 16;
 const easDisplay = document.querySelector('.eas-display');
 const easGrid = document.querySelector('.eas-grid');
+
 function createGrid(size) {
 
     for (let x = 1; x <= size; x++) {
@@ -17,9 +18,8 @@ function createGrid(size) {
             col.appendChild(content);
             row.appendChild(col);
         }
-        easGrid.append(row);
+        easDisplay.append(row);
     }
-    easDisplay.append(easGrid);
 
     easBlocks = document.querySelectorAll(".col");
     easBlocks.forEach(block => {
@@ -38,7 +38,7 @@ function removeGrid(size) {
         cols.forEach(col => {
             col.remove(col);
         });
-        easGrid.removeChild(row);
+        easDisplay.removeChild(row);
     });
 }
 
@@ -50,16 +50,25 @@ function reloadGrid(currentSize, newSize) {
 let size = DEFAULT_GRID_SIZE;
 createGrid(size);
 
-clearBtn = document.querySelector(".clear-btn");
+const clearBtn = document.querySelector(".clear-btn");
 clearBtn.addEventListener('click', () => {
     easBlocks.forEach(block => {
         block.style.background = "white";
     });
 });
 
-sizeBtn = document.querySelector(".size-btn");
-sizeBtn.addEventListener('click', () => {
-    newSize = parseInt(prompt('Enter new grid size: '));
-    reloadGrid(size, newSize);
-    size = newSize;
+const sizeBtns = document.querySelectorAll(".size-btn");
+sizeBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        if (btn.textContent === "Small") {
+            reloadGrid(size, 15);
+            size = 15;
+        } else if (btn.textContent === "Medium") {
+            reloadGrid(size, 30);
+            size = 30;
+        } else {
+            reloadGrid(size, 45);
+            size = 45;
+        }
+    });
 });
