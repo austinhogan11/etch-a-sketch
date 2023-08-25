@@ -17,23 +17,32 @@ body {
 
 .grid-options {
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
     padding: 20px 0;
 
 }
 
+.grid-size-label {
+    margin: 0 10px;
+}
+
+.grid-size-panel {
+    display: flex;
+    align-items: center;
+}
+
 button {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
-    border-radius: 25px;
-    padding: 20px;
-    margin: 0 20gitpx 0 0;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 15px 10px;
 }
 
 .eas-display {
     border: black;
     border-style: solid;
-    
+
 }
 .content {
     display: flex;
@@ -53,7 +62,4 @@ button {
     border-style: solid;
     border-color: grey;
     border-width: 1px;
-    /* border: black;
-    border-style: solid; */
-    /* margin: 5px; */
 }
