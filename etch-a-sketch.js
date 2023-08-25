@@ -24,7 +24,8 @@ function createGrid(size) {
     easBlocks = document.querySelectorAll(".col");
     easBlocks.forEach(block => {
         block.addEventListener("mouseenter", (e) => {
-            e.target.style.background = 'aquamarine';
+            let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            e.target.style.background = `#${randomColor}`;
         });
 
     });
